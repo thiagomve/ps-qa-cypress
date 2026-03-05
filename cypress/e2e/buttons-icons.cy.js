@@ -3,7 +3,7 @@ beforeEach(() => {
 })
 
 
-// Validação dos botões "Quero me certificar
+// Validação dos botões "Quero me certificar"
 describe('Validação dos botões "Quero me certificar"', () => {
   it('Deve validar existência e redirecionamento dos 3 botões', () => {
 
@@ -35,7 +35,7 @@ describe('Validação do botão "Saiba mais" do Header', () => {
       .should('not.be.disabled')
       .should('have.attr', 'href')
       .then((href) => {
-        cy.log(`O botão "Saiba mais" redireciona para: ${href}`)
+        cy.log(`O botão "Saiba mais" está redirecionando para: ${href}`)
       })
   })
 })
@@ -69,5 +69,3 @@ describe('Validação dos botões/ícones de redes sociais', () => {
   })
 
 })
-
-
