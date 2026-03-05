@@ -5,24 +5,26 @@ beforeEach(() => {
 
 // Validação dos botões "Quero me certificar"
 describe('Validação dos botões "Quero me certificar"', () => {
-  it('Deve validar existência e redirecionamento dos 3 botões', () => {
 
-    const botoes = ['#ivw5ng', '#i72bga', '#ixy3u1']
+  // const botoes = ['#ivw5ng', '#i72bga', '#ixy3u1']
+  const botoes = [
+    { id: '#ivw5ng', nome: 'Quero me certificar - Sessão 1' },
+    { id: '#i72bga', nome: 'Quero me certificar - Sessão 2' },
+    { id: '#ixy3u1', nome: 'Quero me certificar - Sessão 3' }
+  ]
 
-    botoes.forEach((botao) => {
-
-      cy.get(botao) // Acessa cada botão conforme os id da variável definida a cima.
+  botoes.forEach(({ id, nome }) => {
+    it(`Deve validar existência e redirecionamento do botão ${nome}`, () => {
+      cy.get(id) // Acessa cada botão conforme os id da variável definida a cima.
         .should('exist') // Valida se o botão existe
         .should('be.visible') // Valida se está visível
         .should('not.be.disabled') // Valida se não está desabilitado
         .should('have.attr', 'href') // Verifica se contém href
         .then((href) => {
-          cy.log(`O botão ${botao} redireciona para: ${href}`)
+          cy.log(`O botão ${nome} redireciona para: ${href}`)
         }) // Exibe o href que está redirecionando
-
     })
   })
-
 })
 
 
@@ -40,6 +42,29 @@ describe('Validação do botão "Saiba mais" do Header', () => {
   })
 })
 
+// Validação do botão "Saiba mais" da sessão "Outros cursos"
+
+describe('Validação dos 3 botões "Saiba mais" da sessão "Outros cursos"', () => {
+
+  const botoes = [
+    { id: '#inawao' },
+    { id: '#inzf4v' },
+    { id: '#i90t3o' }
+  ]
+
+  botoes.forEach(({ id }) => {
+    it(`Deve validar existência e redirecionamento do botão de ID ${id}`, () => {
+      cy.get(id) // Acessa cada botão conforme os id da variável definida a cima.
+        .should('exist') // Valida se o botão existe
+        .should('be.visible') // Valida se está visível
+        .should('not.be.disabled') // Valida se não está desabilitado
+        .should('have.attr', 'href') // Verifica se contém href
+        .then((href) => {
+          cy.log(`O botão ${id} redireciona para: ${href}`)
+        }) // Exibe o href que está redirecionando
+    })
+  })
+})
 
 // Validação dos botões/ícones de redes sociais
 describe('Validação dos botões/ícones de redes sociais', () => {
