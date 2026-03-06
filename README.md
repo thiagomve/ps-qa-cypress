@@ -40,6 +40,7 @@ npm install
 ### 3️⃣ Executar o Cypress
 
 Modo interface:
+
 ⚠️ Recomenda-se abrir o terminal como administrador para evitar possíveis problemas de execução do Cypress.
 ```bash
 npx cypress open
