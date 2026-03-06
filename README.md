@@ -15,7 +15,7 @@ A automação foi desenvolvida como parte de um **teste prático para processo s
 
 ---
 
-# 🧰 Tecnologias utilizadas
+## 🧰 Tecnologias utilizadas
 
 - JavaScript
 - Cypress
@@ -23,7 +23,7 @@ A automação foi desenvolvida como parte de um **teste prático para processo s
 
 ---
 
-# 🚀 Como executar o projeto
+## 🚀 Como executar o projeto
 
 ### 1️⃣ Clonar o repositório
 
@@ -50,7 +50,7 @@ Modo headless:
 npx cypress run
 ```
 
-# 🧪 Cenários de teste implementados
+## 🧪 Cenários de teste implementados
 ## Validação dos botões de redirecionamento
 
 ### Testes realizados:
