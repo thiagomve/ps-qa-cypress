@@ -2,7 +2,6 @@ beforeEach(() => {
   cy.visit('https://qualidade.apprbs.com.br/certificacao/')
 })
 
-
 // Validação dos botões "Quero me certificar"
 describe('Validação dos botões "Quero me certificar"', () => {
 
@@ -54,14 +53,14 @@ describe('Validação dos 3 botões "Saiba mais" da sessão "Outros cursos"', ()
 
   botoes.forEach(({ id }) => {
     it(`Deve validar existência e redirecionamento do botão de ID ${id}`, () => {
-      cy.get(id) // Acessa cada botão conforme os id da variável definida a cima.
-        .should('exist') // Valida se o botão existe
-        .should('be.visible') // Valida se está visível
-        .should('not.be.disabled') // Valida se não está desabilitado
-        .should('have.attr', 'href') // Verifica se contém href
+      cy.get(id) 
+        .should('exist') 
+        .should('be.visible') 
+        .should('not.be.disabled') 
+        .should('have.attr', 'href') 
         .then((href) => {
           cy.log(`O botão ${id} redireciona para: ${href}`)
-        }) // Exibe o href que está redirecionando
+        }) 
     })
   })
 })
