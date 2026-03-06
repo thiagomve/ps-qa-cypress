@@ -2,7 +2,7 @@
 
 ## 📌 Objetivo
 
-Este projeto contém testes automatizados desenvolvidos com **Cypress** para validar funcionalidades de uma landing page.
+Este projeto contém testes automatizados desenvolvidos com **Cypress** para validar funcionalidades de uma [landing page](https://qualidade.apprbs.com.br/certificacao/).
 
 O objetivo é garantir o correto funcionamento dos principais elementos da página, como:
 
